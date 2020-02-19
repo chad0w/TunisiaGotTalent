@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="1040.0" style="-fx-background-color: #E9EBEE;" stylesheets="@../../../../../Desktop/ma3oun%205edma/pi/mysoulmate/mysoulmate/src/view/style/MatchViewStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MatchViewController">
+   <children>
+      <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" prefWidth="200.0" />
+      <HBox fx:id="filter" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="230.0" prefWidth="1838.0">
+         <VBox.margin>
+            <Insets bottom="10.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="880.0" style="-fx-background-color: white;">
+               <children>
+                  <ComboBox fx:id="distance" layoutX="579.0" layoutY="38.0" prefHeight="25.0" prefWidth="106.0" promptText="all" style="-fx-background-color: white; -fx-border-color: gray;" />
+                  <Label layoutX="579.0" layoutY="7.0" text="categorie">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="326.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSearchButtonClick" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 7;" styleClass="searchButton">
+                     <children>
+                        <Label text="Search" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="455.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCancelButtonClick" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 7; -fx-border-color: gray; -fx-border-radius: 7;" styleClass="cancelButton">
+                     <children>
+                        <Label text="Reset">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <TextField fx:id="tfRechecher" layoutY="90.0" onKeyReleased="#tfRechecherOnKeyReleased" prefHeight="25.0" prefWidth="617.0" promptText="Rechercher" style="-fx-background-color: #797980;" />
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="1300.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="880.0" spacing="10.0">
+               <children>
+                  <Label text="Sort by" textFill="#949aa6" />
+                  <ComboBox fx:id="sort" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: white; -fx-border-color: gray;" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <StackPane alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <FlowPane fx:id="result" hgap="20.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="880.0" vgap="30.0">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets bottom="20.0" top="10.0" />
+               </padding>
+            </FlowPane>
+         </children>
+      </StackPane>
+   </children>
+</VBox>
